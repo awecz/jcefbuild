@@ -191,7 +191,7 @@ jobs:
 
 
   build-macosx-amd64:
-    runs-on: macos-12
+    runs-on: macos-latest
     needs: create-release
     permissions:
       contents: write
@@ -206,7 +206,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '8'
-          distribution: 'adopt'
+          distribution: 'corretto'
       - uses: actions/setup-python@v5
         with:
           python-version: '3.10.11'
@@ -261,7 +261,7 @@ jobs:
 
 
   build-macosx-arm64:
-    runs-on: macos-12
+    runs-on: macos-latest
     needs: create-release
     permissions:
       contents: write
@@ -276,7 +276,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '8'
-          distribution: 'adopt'
+          distribution: 'corretto'
       - uses: actions/setup-python@v5
         with:
           python-version: '3.10.11'
